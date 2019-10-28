@@ -1,6 +1,6 @@
 import * as tsx from 'vue-tsx-support'
 import { VNode } from 'vue'
-
+import {MyReactComponent} from "@/components/MyReactComponent";
 import { Sign } from '@/types/sign'
 import './adder.css'
 
@@ -55,7 +55,7 @@ const Adder = tsx.componentFactoryOf<IEvents>().create({
 
           <div class='signs'>
             {signs.map(sign =>
-              <span 
+              <span
                 class={sign === selectedSign ? 'selected sign' : 'sign'}
                 onClick={() => this.$emit('changeSign', sign)}
               >
